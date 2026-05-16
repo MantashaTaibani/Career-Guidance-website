@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Us</title>
+
+<script>
+function showMessage(){
+    var name = document.getElementById("name").value;
+
+    document.getElementById("reply").innerHTML =
+    "Thank you " + name + "! Your question has been sent. Our expert will reply soon.";
+}
+</script>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial;
+    background-color:#2f2f2f;
+    color:white;
+}
+nav{
+    background-color:#000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+}
+
+nav a:hover{
+    color:orange;
+}
+.container{
+    text-align:center;
+    padding:30px;
+}
+input, textarea{
+    width:250px;
+    padding:8px;
+    margin:8px;
+    border:none;
+    border-radius:5px;
+}
+button{
+    padding:10px 20px;
+    background-color:orange;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+button:hover{
+    background-color:darkorange;
+}
+.feedback-box{
+    margin-top:30px;
+    padding:15px;
+    background:#3a3a3a;
+    border-radius:10px;
+}
+footer{
+    background-color:#222;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+a{
+    color:orange;
+}
+</style>
+
+</head>
+
+<body>
+<nav>
+    <div class="logo">Path-To-Win</div>
+    <div>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="after10th.html">After 10th</a>
+        <a href="12.html">After 12th</a>
+        <a href="diploma.html">Courses</a>
+        <a href="expert.html">Contact</a>
+    </div>
+</nav>
+
+<div class="container">
+<h2>Why Contact Us?</h2>
+<p>
+✔ Free career guidance <br>
+✔ Expert suggestions <br>
+✔ Personalized advice <br>
+✔ Quick response
+</p>
+
+<p>
+Our experts will guide you based on your interests and goals.
+Feel free to ask any doubts about streams, courses, or careers.
+</p>
+
+<h2>Ask a Career Expert 🎓</h2>
+<p>Get free guidance from our experts. Ask your doubts below:</p>
+
+<form>
+Name:<br>
+<input type="text" id="name"><br>
+
+Email:<br>
+<input type="email"><br>
+
+Your Question:<br>
+<textarea rows="4"></textarea><br>
+
+<button type="button" onclick="showMessage()">Submit</button>
+
+</form>
+
+<p id="reply"></p>
+<div class="feedback-box">
+<h3>Feedback 💬</h3>
+<p>
+Help us improve our website! <br>
+<a href="feedback.html">Click here to share your feedback</a>
+</p>
+</div>
+
+</div>
+<footer>
+
+    <h3>About</h3>
+    <p>Career Guidance website helps students choose the right career after 10th.</p>
+
+    <h3>Quick Links</h3>
+    <p><a href="home.html">Home</a></p>
+    <p><a href="after10th.html">After 10th</a></p>
+    <p><a href="12.html">After 12th</a></p>
+    <p><a href="diploma.html">Course</a></p>
+    <p><a href="expert.html">Contact Us</a></p>
+    
+    <hr>
+
+    <p>© 2026 Career Guidance Website | Created by Mantasha Taibani and Ankita Savla</p>
+
+</footer>
+
+</body>
+</html>

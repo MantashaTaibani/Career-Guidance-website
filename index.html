@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CareerCompass India – Your Digital Career Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0d1117;
+    --cream: #f5f0e8;
+    --gold: #c8972a;
+    --rust: #c94f2a;
+    --teal: #1a7a6e;
+    --soft: #e8e2d6;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
+
+   nav {
+            background-color: #2c3e50; 
+            padding: 15px;
+            text-align: center;
+        }
+
+     
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+       
+        nav a:hover {
+            color: #f39c12;  
+        }
+    nav {
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+footer{
+background-color:#222;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+a {
+    color: orange;
+    text-decoration: none;
+}
+body{
+    background-color:hsla(0, 0%, 0%, 0.766);
+    color:white;}
+  .hero {
+    min-height: 88vh;
+    background: var(--ink);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(200,151,42,0.15) 0%, transparent 70%);
+    top: -100px; right: 200px;
+    border-radius: 50%;
+  }
+  .hero-text { padding: 80px 60px 80px 80px; position: relative; z-index: 2; }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(200,151,42,0.15);
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 2px;
+    margin-bottom: 28px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 4.5vw, 4.5rem);
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+  .hero h1 span { color: var(--gold); }
+  .hero p { color: #aaa; font-size: 1.05rem; line-height: 1.8; max-width: 480px; margin-bottom: 40px; }
+  .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--gold); color: var(--ink); font-weight: 700;
+    padding: 14px 32px; border-radius: 4px; text-decoration: none;
+    font-size: 0.9rem; letter-spacing: 0.5px; transition: all 0.2s;
+  }
+  .btn-primary:hover { background: #e0aa30; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,151,42,0.3); }
+  .btn-outline {
+    border: 1.5px solid rgba(255,255,255,0.3); color: #fff;
+    padding: 14px 32px; border-radius: 4px; text-decoration: none;
+    font-size: 0.9rem; letter-spacing: 0.5px; transition: all 0.2s;
+  }
+  .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.05); }
+
+  /* Hero right grid */
+  .hero-grid { padding: 60px 60px 60px 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; position: relative; z-index: 2; }
+  .hero-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 24px;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: block;
+  }
+  .hero-card:hover { background: rgba(255,255,255,0.09); transform: translateY(-4px); border-color: var(--gold); }
+  .hero-card .icon { font-size: 2rem; margin-bottom: 12px; }
+  .hero-card h3 { color: #fff; font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; }
+  .hero-card p { color: #888; font-size: 0.78rem; line-height: 1.5; }
+
+  /* STATS */
+  .stats { background: var(--gold); padding: 40px 80px; display: flex; gap: 60px; justify-content: center; }
+  .stat { text-align: center; }
+  .stat .num { font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 900; color: var(--ink); }
+  .stat .label { font-size: 0.8rem; font-weight: 600; color: rgba(13,17,23,0.7); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+
+  /* SECTIONS */
+  .section { padding: 80px 80px; }
+  .section-tag { font-size: 0.75rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
+  .section h2 { font-family: 'Playfair Display', serif; font-size: 2.6rem; margin-bottom: 16px; }
+  .section .sub { color: #666; font-size: 1rem; line-height: 1.7; max-width: 560px; margin-bottom: 48px; }
+
+  /* PATH CARDS */
+  .path-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .path-card {
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+  }
+  .path-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(0,0,0,0.12); }
+  .path-card .card-top { padding: 36px 28px 28px; }
+  .path-card .num-badge {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 48px; height: 48px; border-radius: 12px;
+    font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 900;
+    margin-bottom: 16px;
+  }
+  .path-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+  .path-card p { font-size: 0.85rem; line-height: 1.6; }
+  .path-card .card-footer { padding: 16px 28px; display: flex; align-items: center; justify-content: space-between; }
+  .path-card .card-footer span { font-size: 0.8rem; font-weight: 600; }
+  .path-card .arrow { font-size: 1.2rem; }
+
+  .card-10 .card-top { background: #fff0e8; }
+  .card-10 .num-badge { background: rgba(201,79,42,0.15); color: var(--rust); }
+  .card-10 h3 { color: var(--rust); }
+  .card-10 p { color: #7a4030; }
+  .card-10 .card-footer { background: var(--rust); color: #fff; }
+
+  .card-12 .card-top { background: #e8f0ff; }
+  .card-12 .num-badge { background: rgba(41,79,201,0.12); color: #294fc9; }
+  .card-12 h3 { color: #294fc9; }
+  .card-12 p { color: #304a8a; }
+  .card-12 .card-footer { background: #294fc9; color: #fff; }
+
+  .card-dip .card-top { background: #e8f6f4; }
+  .card-dip .num-badge { background: rgba(26,122,110,0.12); color: var(--teal); }
+  .card-dip h3 { color: var(--teal); }
+  .card-dip p { color: #1a5048; }
+  .card-dip .card-footer { background: var(--teal); color: #fff; }
+
+  /* FEATURES */
+  .features-section { background: var(--ink); }
+  .features-section .section-tag { color: var(--gold); }
+  .features-section h2 { color: #fff; }
+  .features-section .sub { color: #aaa; }
+  .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .feature-box {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 32px;
+    transition: border-color 0.2s;
+  }
+  .feature-box:hover { border-color: var(--gold); }
+  .feature-box .fi { font-size: 2rem; margin-bottom: 16px; }
+  .feature-box h4 { color: #fff; font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
+  .feature-box p { color: #888; font-size: 0.85rem; line-height: 1.6; }
+
+  /* CTA */
+  .cta-section { background: var(--teal); padding: 80px; text-align: center; }
+  .cta-section h2 { font-family: 'Playfair Display', serif; font-size: 2.8rem; color: #fff; margin-bottom: 16px; }
+  .cta-section p { color: rgba(255,255,255,0.8); font-size: 1rem; margin-bottom: 36px; }
+  .btn-white { background: #fff; color: var(--teal); font-weight: 700; padding: 14px 36px; border-radius: 4px; text-decoration: none; font-size: 0.9rem; display: inline-block; transition: all 0.2s; }
+  .btn-white:hover { background: #f0f0f0; transform: translateY(-2px); }
+
+  /* FOOTER */
+  footer { background: #080c10; color: #666; text-align: center; padding: 28px; font-size: 0.82rem; }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  @media(max-width: 900px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-grid { display: none; }
+    .hero-text { padding: 60px 32px; }
+    .stats { flex-wrap: wrap; gap: 32px; padding: 40px 32px; }
+    .section { padding: 60px 32px; }
+    .path-grid, .features-grid { grid-template-columns: 1fr; }
+    nav { padding: 0 20px; }
+    .nav-links { gap: 2px; }
+    .nav-links a { font-size: 0.72rem; padding: 5px 7px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Path-To-Win</div>
+
+    <div class="menu">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="after10th.html">After 10th</a>
+        <a href="12.html">After 12th</a>
+        <a href="diploma.html">Courses</a>
+        <a href="expert.html">Contact</a>
+    </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-badge">India's #1 Career Guidance Platform</div>
+    <h1>Find Your <span>Perfect</span> Career Path</h1>
+    <p>From Class 10 to postgraduation — explore career options, compare courses, and get expert guidance tailored for Indian students.</p>
+    <div class="hero-buttons">
+      <a href="expert.html"  class="btn-primary">Get Free Counselling</a>
+      
+    </div>
+  </div>
+  <div class="hero-grid">
+    <a href="after10th.html" class="hero-card">
+      <div class="icon">🎓</div>
+      <h3>After 10th</h3>
+      <p>Science, Commerce, Arts & Vocational streams</p>
+    </a>
+    <a href="jj.html" class="hero-card">
+      <div class="icon">📚</div>
+      <h3>After 12th</h3>
+      <p>Engineering, Medicine, Law, Management & more</p>
+    </a>
+    <a href="diploma.html" class="hero-card">
+      <div class="icon">🛠️</div>
+      <h3>Diploma Careers</h3>
+      <p>Technical & vocational diploma paths</p>
+    </a>
+    <a href="expert.html" class="hero-card">
+      <div class="icon">💬</div>
+      <h3>Counselling</h3>
+      <p>Talk to an expert career counsellor today</p>
+    </a>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat"><div class="num">500+</div><div class="label">Career Options</div></div>
+  <div class="stat"><div class="num">50K+</div><div class="label">Students Guided</div></div>
+  <div class="stat"><div class="num">200+</div><div class="label">Expert Counsellors</div></div>
+  <div class="stat"><div class="num">98%</div><div class="label">Satisfaction Rate</div></div>
+</div>
+
+
+
+<section class="section features-section">
+  <div class="section-tag">Why CareerCompass</div>
+  <h2>Everything You Need to Decide</h2>
+  <p class="sub">We go beyond listings — we give you the tools, information and human support to make confident career decisions.</p>
+  <div class="features-grid">
+    <div class="feature-box">
+      <div class="fi">🗺️</div>
+      <h4>Detailed Career Maps</h4>
+      <p>Step-by-step roadmaps from qualification to job, including entrance exams, colleges, and salary ranges.</p>
+    </div>
+    
+    <div class="feature-box">
+      <div class="fi">👨‍💼</div>
+      <h4>Live Counselling Sessions</h4>
+      <p>One-on-one video sessions with certified career counsellors who understand the Indian job market.</p>
+    </div>
+   
+    
+    <div class="feature-box">
+      <div class="fi">📝</div>
+      <h4>Entrance Exam Guide</h4>
+      <p>Complete calendar of JEE, NEET, CLAT, CAT and 50+ other entrance exams with syllabus and tips.</p>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+
+    <h3>About</h3>
+    <p>Career Guidance website helps students choose the right career after 10th.</p>
+
+    <h3>Quick Links</h3>
+    <p><a href="home.html">Home</a></p>
+    <p><a href="after10th.html">After 10th</a></p>
+    <p><a href="12.html">After 12th</a></p>
+    <p><a href="diploma.html">Course</a></p>
+    <p><a href="expert.html">Contact Us</a></p>
+    
+    <hr>
+
+    <p>© 2026 Career Guidance Website | Created by Mantasha Taibani and Ankita Savla</p>
+
+</footer>
+</body>
+</html>
+f
